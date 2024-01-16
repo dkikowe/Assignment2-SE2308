@@ -1,6 +1,6 @@
 public class Person implements Comparable<Person>{
     private int id;
-    private static int counterId=1;
+    private static int counterId=0;
     private  String name;
     private String surname;
     private String position;
@@ -11,7 +11,8 @@ public class Person implements Comparable<Person>{
     public Person(){
     }
     public Person(String name , String surname){
-        this.id=counterId++;
+        counterId+=1;
+        this.id=counterId;
         this.name = name;
         this.surname = surname;
 
